@@ -116,6 +116,26 @@ The current synthetic day produces **3 Healthy, 2 At Risk and 5 Critical** proje
 
 Diagrams are source-controlled Mermaid in `diagrams/` and rendered inline in these docs. No screenshots are fabricated. After local verification, capture the six canvases and an execution result; omit credentials and recipient details before publishing.
 
+## Visual walkthrough
+
+### Project health monitoring
+
+The health-monitor workflow can run manually for demonstrations or on a schedule, with project scoring and snapshot persistence handled by the companion service.
+
+![Project Health Monitor n8n workflow](docs/Screenshots/01-project-health-monitor.jpg)
+
+### Successful execution
+
+A successful monitor execution processed all 10 synthetic portfolio projects. The example below is an idempotent rerun: duplicate: true and created: 0 show that an existing daily snapshot was detected rather than duplicated.
+
+![Successful Project Health Monitor execution](docs/Screenshots/01-project-health-monitor-execution.jpg)
+
+### Safe stakeholder notification routing
+
+The notification workflow separates dry-run simulation from live delivery and provides explicit email/Slack routing plus delivery and failure acknowledgement paths.
+
+![Stakeholder Notification n8n workflow](docs/Screenshots/04-stakeholder-notification.jpg)
+
 ## Testing
 
 With Python 3.12 and Node.js installed, from the repository root:
