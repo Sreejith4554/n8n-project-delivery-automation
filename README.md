@@ -87,7 +87,7 @@ tests/            Executable rules, persistence and HTTP tests
 docs/             Setup, architecture, security, tests and portfolio copy
 diagrams/         Mermaid architecture and delivery-state diagrams
 examples/         Outputs produced by the service demo
-.github/workflows/ CI checks (CI itself not run in this environment)
+.github/workflows/ GitHub Actions CI validation
 ```
 
 ## Setup and import
