@@ -4,7 +4,7 @@ A local-first, synthetic PMO portfolio project: six n8n workflows coordinate pro
 
 **Portfolio disclosure:** every project, task, risk, milestone, budget, dependency and stakeholder is synthetic. This project has not been deployed for a real employer or client. No business savings or delivery improvements are claimed.
 
-**Validation boundary:** business logic and the local HTTP service were executed in the build environment. Workflow JSON was statically checked against selected official n8n node definitions. **REQUIRES LOCAL N8N VALIDATION:** importing and executing the workflows, Docker runtime, schedules and provider integrations. See [test evidence](docs/test-results.md) and [final audit](docs/final-audit.md).
+**Validation status:** business logic and the local HTTP service were tested successfully, with 54 automated Python tests passing. All six workflow JSON exports passed static validation and were imported and manually executed successfully in a local n8n + Docker environment. GitHub Actions CI also passes on the published repository. Live SMTP/Slack delivery and the optional Ollama integration remain disabled by default and require separate credentials and acceptance testing. See [test evidence](docs/test-results.md) and [final audit](docs/final-audit.md).
 
 ## Business problem and solution
 
@@ -43,7 +43,7 @@ This is a **scheduled, event-backed pipeline**: snapshots and queued records act
 | Native SMTP and Slack delivery branches | Implemented export templates; disabled; credentials and local testing required |
 | Weekly portfolio digest, Markdown and JSON | Implemented; generated from latest snapshots |
 | Analytics CSV and report exports | Implemented; no `.pbix` dashboard or cloud refresh included |
-| n8n import and runtime behavior | Six genuine core-node export files; local validation required |
+| n8n import and runtime behavior | Six core-node workflow exports; imported and manually executed successfully in local n8n + Docker |
 
 ## Workflow map
 
