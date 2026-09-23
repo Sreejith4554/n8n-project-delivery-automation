@@ -1,0 +1,21 @@
+dependency_id,project_id,title,owner,critical,status,impact,action
+P01-D1,P01,Cedar Workflow Rollout: upstream interface approval,Demo Dependency Owner 01,true,ready,Dependent delivery work cannot proceed,Agree an unblock date with the supplying team
+P01-D2,P01,Cedar Workflow Rollout: training material,Demo Dependency Owner 01,false,ready,Dependent delivery work cannot proceed,Agree an unblock date with the supplying team
+P02-D1,P02,Harbor Onboarding: upstream interface approval,Demo Dependency Owner 02,true,ready,Dependent delivery work cannot proceed,Agree an unblock date with the supplying team
+P02-D2,P02,Harbor Onboarding: training material,Demo Dependency Owner 02,false,ready,Dependent delivery work cannot proceed,Agree an unblock date with the supplying team
+P03-D1,P03,Summit Data Migration: upstream interface approval,Demo Dependency Owner 03,true,ready,Dependent delivery work cannot proceed,Agree an unblock date with the supplying team
+P03-D2,P03,Summit Data Migration: training material,Demo Dependency Owner 03,false,blocked,Dependent delivery work cannot proceed,Agree an unblock date with the supplying team
+P04-D1,P04,Orion Integration: upstream interface approval,Demo Dependency Owner 04,true,blocked,Dependent delivery work cannot proceed,Agree an unblock date with the supplying team
+P04-D2,P04,Orion Integration: training material,Demo Dependency Owner 04,false,ready,Dependent delivery work cannot proceed,Agree an unblock date with the supplying team
+P05-D1,P05,Meadow Service Expansion: upstream interface approval,Demo Dependency Owner 05,true,ready,Dependent delivery work cannot proceed,Agree an unblock date with the supplying team
+P05-D2,P05,Meadow Service Expansion: training material,Demo Dependency Owner 05,false,ready,Dependent delivery work cannot proceed,Agree an unblock date with the supplying team
+P06-D1,P06,Atlas Access Review: upstream interface approval,Demo Dependency Owner 06,true,ready,Dependent delivery work cannot proceed,Agree an unblock date with the supplying team
+P06-D2,P06,Atlas Access Review: training material,Demo Dependency Owner 06,false,ready,Dependent delivery work cannot proceed,Agree an unblock date with the supplying team
+P07-D1,P07,River Recovery: upstream interface approval,Demo Dependency Owner 07,true,ready,Dependent delivery work cannot proceed,Agree an unblock date with the supplying team
+P07-D2,P07,River Recovery: training material,Demo Dependency Owner 07,false,ready,Dependent delivery work cannot proceed,Agree an unblock date with the supplying team
+P08-D1,P08,Beacon Platform Refresh: upstream interface approval,Demo Dependency Owner 08,true,ready,Dependent delivery work cannot proceed,Agree an unblock date with the supplying team
+P08-D2,P08,Beacon Platform Refresh: training material,Demo Dependency Owner 08,false,ready,Dependent delivery work cannot proceed,Agree an unblock date with the supplying team
+P09-D1,P09,Willow Knowledge Base: upstream interface approval,Demo Dependency Owner 09,true,ready,Dependent delivery work cannot proceed,Agree an unblock date with the supplying team
+P09-D2,P09,Willow Knowledge Base: training material,Demo Dependency Owner 09,false,ready,Dependent delivery work cannot proceed,Agree an unblock date with the supplying team
+P10-D1,P10,Juniper Reporting: upstream interface approval,Demo Dependency Owner 10,true,ready,Dependent delivery work cannot proceed,Agree an unblock date with the supplying team
+P10-D2,P10,Juniper Reporting: training material,Demo Dependency Owner 10,false,ready,Dependent delivery work cannot proceed,Agree an unblock date with the supplying team

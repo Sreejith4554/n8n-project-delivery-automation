@@ -1,0 +1,9 @@
+stateDiagram-v2
+  [*] --> Pending
+  Pending --> Leased: Claim with token
+  Leased --> Simulated: Dry-run acknowledgement
+  Leased --> Sent: Provider success and acknowledgement
+  Leased --> Pending: Failure with backoff or lease expiry
+  Leased --> Dead: Fifth failed or expired attempt
+  Sent --> [*]
+  Simulated --> [*]

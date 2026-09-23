@@ -1,0 +1,15 @@
+# Synthetic critical escalation
+
+- **issue_key**: P06:P06-R1
+- **project_id**: P06
+- **project**: Atlas Access Review
+- **issue**: Atlas Access Review: supplier readiness uncertainty
+- **severity**: CRITICAL
+- **owner**: Demo Risk Owner 06
+- **impact**: Acceptance or handover may be delayed
+- **required_action**: Confirm mitigation owner and response date
+- **due_date**: 2026-09-23
+- **escalation_level**: L2-PMO
+- **escalation_id**: P06:P06-R1:1
+- **timestamp**: 2026-09-23T11:49:27.259499+00:00
+- **snapshot_date**: 2026-09-22

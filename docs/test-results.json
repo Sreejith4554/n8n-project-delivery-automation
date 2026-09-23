@@ -1,0 +1,280 @@
+{
+  "executed_at": "2026-09-23T11:49:26.814068+00:00",
+  "scope": "Python business rules and local HTTP service; NOT an n8n execution",
+  "python": "3.12.14",
+  "tests_run": 54,
+  "failures": 0,
+  "errors": 0,
+  "results": [
+    {
+      "test": "test_hub.HTTPIntegration.test_http_pipeline",
+      "expected": "Assertions pass",
+      "actual": "PASS"
+    },
+    {
+      "test": "test_hub.HTTPIntegration.test_invalid_ack_returns_422",
+      "expected": "Assertions pass",
+      "actual": "PASS"
+    },
+    {
+      "test": "test_hub.HTTPIntegration.test_ollama_transport_failure",
+      "expected": "Assertions pass",
+      "actual": "PASS"
+    },
+    {
+      "test": "test_hub.HTTPIntegration.test_unknown_route",
+      "expected": "Assertions pass",
+      "actual": "PASS"
+    },
+    {
+      "test": "test_hub.Persistence.test_ai_invalid_response_fallback",
+      "expected": "Assertions pass",
+      "actual": "PASS"
+    },
+    {
+      "test": "test_hub.Persistence.test_ai_unavailable",
+      "expected": "Assertions pass",
+      "actual": "PASS"
+    },
+    {
+      "test": "test_hub.Persistence.test_ai_valid_permutation",
+      "expected": "Assertions pass",
+      "actual": "PASS"
+    },
+    {
+      "test": "test_hub.Persistence.test_at_risk_pm_only",
+      "expected": "Assertions pass",
+      "actual": "PASS"
+    },
+    {
+      "test": "test_hub.Persistence.test_changed_data_same_day_conflict",
+      "expected": "Assertions pass",
+      "actual": "PASS"
+    },
+    {
+      "test": "test_hub.Persistence.test_concurrent_claims_unique",
+      "expected": "Assertions pass",
+      "actual": "PASS"
+    },
+    {
+      "test": "test_hub.Persistence.test_critical_recipients_include_pmo",
+      "expected": "Assertions pass",
+      "actual": "PASS"
+    },
+    {
+      "test": "test_hub.Persistence.test_csv_export_idempotent",
+      "expected": "Assertions pass",
+      "actual": "PASS"
+    },
+    {
+      "test": "test_hub.Persistence.test_digest_counts_and_upsert",
+      "expected": "Assertions pass",
+      "actual": "PASS"
+    },
+    {
+      "test": "test_hub.Persistence.test_duplicate_ack",
+      "expected": "Assertions pass",
+      "actual": "PASS"
+    },
+    {
+      "test": "test_hub.Persistence.test_duplicate_execution",
+      "expected": "Assertions pass",
+      "actual": "PASS"
+    },
+    {
+      "test": "test_hub.Persistence.test_empty_digest",
+      "expected": "Assertions pass",
+      "actual": "PASS"
+    },
+    {
+      "test": "test_hub.Persistence.test_empty_queue",
+      "expected": "Assertions pass",
+      "actual": "PASS"
+    },
+    {
+      "test": "test_hub.Persistence.test_fifth_failed_attempt_dead_letter",
+      "expected": "Assertions pass",
+      "actual": "PASS"
+    },
+    {
+      "test": "test_hub.Persistence.test_final_expired_lease_dead_letter",
+      "expected": "Assertions pass",
+      "actual": "PASS"
+    },
+    {
+      "test": "test_hub.Persistence.test_healthy_has_no_notification",
+      "expected": "Assertions pass",
+      "actual": "PASS"
+    },
+    {
+      "test": "test_hub.Persistence.test_lease_expiry_recovery",
+      "expected": "Assertions pass",
+      "actual": "PASS"
+    },
+    {
+      "test": "test_hub.Persistence.test_notification_failure_retained",
+      "expected": "Assertions pass",
+      "actual": "PASS"
+    },
+    {
+      "test": "test_hub.Persistence.test_out_of_order_rejected",
+      "expected": "Assertions pass",
+      "actual": "PASS"
+    },
+    {
+      "test": "test_hub.Persistence.test_partial_stage_recovery",
+      "expected": "Assertions pass",
+      "actual": "PASS"
+    },
+    {
+      "test": "test_hub.Persistence.test_resolved_then_reopened_issue",
+      "expected": "Assertions pass",
+      "actual": "PASS"
+    },
+    {
+      "test": "test_hub.Persistence.test_severity_change_new_episode",
+      "expected": "Assertions pass",
+      "actual": "PASS"
+    },
+    {
+      "test": "test_hub.Persistence.test_stale_ack_rejected",
+      "expected": "Assertions pass",
+      "actual": "PASS"
+    },
+    {
+      "test": "test_hub.Persistence.test_trends_computed_from_real_prior_snapshot",
+      "expected": "Assertions pass",
+      "actual": "PASS"
+    },
+    {
+      "test": "test_hub.Persistence.test_unresolved_issue_dedup_across_days",
+      "expected": "Assertions pass",
+      "actual": "PASS"
+    },
+    {
+      "test": "test_hub.Rules.test_ai_duplicate_fact_rejected",
+      "expected": "Assertions pass",
+      "actual": "PASS"
+    },
+    {
+      "test": "test_hub.Rules.test_ai_fact_invention_rejected",
+      "expected": "Assertions pass",
+      "actual": "PASS"
+    },
+    {
+      "test": "test_hub.Rules.test_at_risk",
+      "expected": "Assertions pass",
+      "actual": "PASS"
+    },
+    {
+      "test": "test_hub.Rules.test_budget_forecast_overrun",
+      "expected": "Assertions pass",
+      "actual": "PASS"
+    },
+    {
+      "test": "test_hub.Rules.test_closed_critical_risk_not_escalated",
+      "expected": "Assertions pass",
+      "actual": "PASS"
+    },
+    {
+      "test": "test_hub.Rules.test_critical_dependency_override",
+      "expected": "Assertions pass",
+      "actual": "PASS"
+    },
+    {
+      "test": "test_hub.Rules.test_critical_overdue_tasks",
+      "expected": "Assertions pass",
+      "actual": "PASS"
+    },
+    {
+      "test": "test_hub.Rules.test_critical_risk_override",
+      "expected": "Assertions pass",
+      "actual": "PASS"
+    },
+    {
+      "test": "test_hub.Rules.test_due_today_not_overdue",
+      "expected": "Assertions pass",
+      "actual": "PASS"
+    },
+    {
+      "test": "test_hub.Rules.test_duplicate_source_id",
+      "expected": "Assertions pass",
+      "actual": "PASS"
+    },
+    {
+      "test": "test_hub.Rules.test_empty_portfolio",
+      "expected": "Assertions pass",
+      "actual": "PASS"
+    },
+    {
+      "test": "test_hub.Rules.test_forecast_below_actual_rejected",
+      "expected": "Assertions pass",
+      "actual": "PASS"
+    },
+    {
+      "test": "test_hub.Rules.test_healthy",
+      "expected": "Assertions pass",
+      "actual": "PASS"
+    },
+    {
+      "test": "test_hub.Rules.test_invalid_as_of",
+      "expected": "Assertions pass",
+      "actual": "PASS"
+    },
+    {
+      "test": "test_hub.Rules.test_invalid_date",
+      "expected": "Assertions pass",
+      "actual": "PASS"
+    },
+    {
+      "test": "test_hub.Rules.test_missing_required_field",
+      "expected": "Assertions pass",
+      "actual": "PASS"
+    },
+    {
+      "test": "test_hub.Rules.test_missing_stakeholder_rejected",
+      "expected": "Assertions pass",
+      "actual": "PASS"
+    },
+    {
+      "test": "test_hub.Rules.test_missing_tasks_not_healthy",
+      "expected": "Assertions pass",
+      "actual": "PASS"
+    },
+    {
+      "test": "test_hub.Rules.test_nan_budget",
+      "expected": "Assertions pass",
+      "actual": "PASS"
+    },
+    {
+      "test": "test_hub.Rules.test_orphan_reference",
+      "expected": "Assertions pass",
+      "actual": "PASS"
+    },
+    {
+      "test": "test_hub.Rules.test_overdue_milestone",
+      "expected": "Assertions pass",
+      "actual": "PASS"
+    },
+    {
+      "test": "test_hub.Rules.test_path_like_id_rejected",
+      "expected": "Assertions pass",
+      "actual": "PASS"
+    },
+    {
+      "test": "test_hub.Rules.test_report_covers_every_required_section",
+      "expected": "Assertions pass",
+      "actual": "PASS"
+    },
+    {
+      "test": "test_hub.Rules.test_unknown_status_rejected",
+      "expected": "Assertions pass",
+      "actual": "PASS"
+    },
+    {
+      "test": "test_hub.Rules.test_zero_budget",
+      "expected": "Assertions pass",
+      "actual": "PASS"
+    }
+  ]
+}

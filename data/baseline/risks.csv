@@ -1,0 +1,31 @@
+risk_id,project_id,title,owner,severity,status,impact,action
+P01-R1,P01,Cedar Workflow Rollout: supplier readiness uncertainty,Demo Risk Owner 01,medium,open,Acceptance or handover may be delayed,Confirm mitigation owner and response date
+P01-R2,P01,Cedar Workflow Rollout: review capacity constraint,Demo Risk Owner 01,medium,open,Acceptance or handover may be delayed,Confirm mitigation owner and response date
+P01-R3,P01,Cedar Workflow Rollout: handover knowledge gap,Demo Risk Owner 01,medium,closed,Acceptance or handover may be delayed,Confirm mitigation owner and response date
+P02-R1,P02,Harbor Onboarding: supplier readiness uncertainty,Demo Risk Owner 02,medium,open,Acceptance or handover may be delayed,Confirm mitigation owner and response date
+P02-R2,P02,Harbor Onboarding: review capacity constraint,Demo Risk Owner 02,medium,open,Acceptance or handover may be delayed,Confirm mitigation owner and response date
+P02-R3,P02,Harbor Onboarding: handover knowledge gap,Demo Risk Owner 02,medium,closed,Acceptance or handover may be delayed,Confirm mitigation owner and response date
+P03-R1,P03,Summit Data Migration: supplier readiness uncertainty,Demo Risk Owner 03,high,open,Acceptance or handover may be delayed,Confirm mitigation owner and response date
+P03-R2,P03,Summit Data Migration: review capacity constraint,Demo Risk Owner 03,medium,open,Acceptance or handover may be delayed,Confirm mitigation owner and response date
+P03-R3,P03,Summit Data Migration: handover knowledge gap,Demo Risk Owner 03,medium,closed,Acceptance or handover may be delayed,Confirm mitigation owner and response date
+P04-R1,P04,Orion Integration: supplier readiness uncertainty,Demo Risk Owner 04,medium,open,Acceptance or handover may be delayed,Confirm mitigation owner and response date
+P04-R2,P04,Orion Integration: review capacity constraint,Demo Risk Owner 04,medium,open,Acceptance or handover may be delayed,Confirm mitigation owner and response date
+P04-R3,P04,Orion Integration: handover knowledge gap,Demo Risk Owner 04,medium,closed,Acceptance or handover may be delayed,Confirm mitigation owner and response date
+P05-R1,P05,Meadow Service Expansion: supplier readiness uncertainty,Demo Risk Owner 05,medium,open,Acceptance or handover may be delayed,Confirm mitigation owner and response date
+P05-R2,P05,Meadow Service Expansion: review capacity constraint,Demo Risk Owner 05,medium,open,Acceptance or handover may be delayed,Confirm mitigation owner and response date
+P05-R3,P05,Meadow Service Expansion: handover knowledge gap,Demo Risk Owner 05,medium,closed,Acceptance or handover may be delayed,Confirm mitigation owner and response date
+P06-R1,P06,Atlas Access Review: supplier readiness uncertainty,Demo Risk Owner 06,critical,open,Acceptance or handover may be delayed,Confirm mitigation owner and response date
+P06-R2,P06,Atlas Access Review: review capacity constraint,Demo Risk Owner 06,medium,open,Acceptance or handover may be delayed,Confirm mitigation owner and response date
+P06-R3,P06,Atlas Access Review: handover knowledge gap,Demo Risk Owner 06,medium,closed,Acceptance or handover may be delayed,Confirm mitigation owner and response date
+P07-R1,P07,River Recovery: supplier readiness uncertainty,Demo Risk Owner 07,medium,open,Acceptance or handover may be delayed,Confirm mitigation owner and response date
+P07-R2,P07,River Recovery: review capacity constraint,Demo Risk Owner 07,medium,open,Acceptance or handover may be delayed,Confirm mitigation owner and response date
+P07-R3,P07,River Recovery: handover knowledge gap,Demo Risk Owner 07,medium,closed,Acceptance or handover may be delayed,Confirm mitigation owner and response date
+P08-R1,P08,Beacon Platform Refresh: supplier readiness uncertainty,Demo Risk Owner 08,medium,open,Acceptance or handover may be delayed,Confirm mitigation owner and response date
+P08-R2,P08,Beacon Platform Refresh: review capacity constraint,Demo Risk Owner 08,medium,open,Acceptance or handover may be delayed,Confirm mitigation owner and response date
+P08-R3,P08,Beacon Platform Refresh: handover knowledge gap,Demo Risk Owner 08,medium,closed,Acceptance or handover may be delayed,Confirm mitigation owner and response date
+P09-R1,P09,Willow Knowledge Base: supplier readiness uncertainty,Demo Risk Owner 09,medium,open,Acceptance or handover may be delayed,Confirm mitigation owner and response date
+P09-R2,P09,Willow Knowledge Base: review capacity constraint,Demo Risk Owner 09,medium,open,Acceptance or handover may be delayed,Confirm mitigation owner and response date
+P09-R3,P09,Willow Knowledge Base: handover knowledge gap,Demo Risk Owner 09,medium,closed,Acceptance or handover may be delayed,Confirm mitigation owner and response date
+P10-R1,P10,Juniper Reporting: supplier readiness uncertainty,Demo Risk Owner 10,high,open,Acceptance or handover may be delayed,Confirm mitigation owner and response date
+P10-R2,P10,Juniper Reporting: review capacity constraint,Demo Risk Owner 10,medium,open,Acceptance or handover may be delayed,Confirm mitigation owner and response date
+P10-R3,P10,Juniper Reporting: handover knowledge gap,Demo Risk Owner 10,medium,closed,Acceptance or handover may be delayed,Confirm mitigation owner and response date

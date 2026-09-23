@@ -1,0 +1,102 @@
+{
+  "name": "05 \u00b7 Weekly PMO Digest",
+  "nodes": [
+    {
+      "id": "b50e4a55-6ccd-547e-9345-cf076cbbbe9c",
+      "name": "Manual demo",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "6176a9e5-d2c8-51d3-be28-eb89e3c32426",
+      "name": "Schedule",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        180
+      ],
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 0 9 * * 1"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "0554c7c8-43f1-50b3-85ab-796b168a5f03",
+      "name": "Read me",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        200,
+        -250
+      ],
+      "parameters": {
+        "content": "Monday 09:00 Europe/Berlin. Summarize latest available snapshot, showing its as-of date, with one updated record per ISO week.",
+        "height": 150,
+        "width": 500
+      }
+    },
+    {
+      "id": "0c94664f-c44b-59ba-a908-17ec44ac1bb2",
+      "name": "Run stage",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        270,
+        0
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "http://hub-api:8000/digest",
+        "options": {
+          "timeout": 240000
+        }
+      },
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 2000
+    }
+  ],
+  "connections": {
+    "Manual demo": {
+      "main": [
+        [
+          {
+            "node": "Run stage",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule": {
+      "main": [
+        [
+          {
+            "node": "Run stage",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "timezone": "Europe/Berlin"
+  },
+  "pinData": {},
+  "tags": []
+}

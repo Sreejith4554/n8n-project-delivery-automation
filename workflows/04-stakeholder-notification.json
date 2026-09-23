@@ -1,0 +1,391 @@
+{
+  "name": "04 \u00b7 Stakeholder Notification",
+  "nodes": [
+    {
+      "id": "b50e4a55-6ccd-547e-9345-cf076cbbbe9c",
+      "name": "Manual demo",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "6176a9e5-d2c8-51d3-be28-eb89e3c32426",
+      "name": "Schedule",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        180
+      ],
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "20 * * * * *"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "0554c7c8-43f1-50b3-85ab-796b168a5f03",
+      "name": "Read me",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        200,
+        -250
+      ],
+      "parameters": {
+        "content": "Claim one durable outbox item. Default is simulation. Live branches are disabled until configured; read setup-guide.md.",
+        "height": 150,
+        "width": 500
+      }
+    },
+    {
+      "id": "3893f473-c5d2-5c4b-b9ec-887e0270cca3",
+      "name": "Claim notification",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        270,
+        0
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "http://hub-api:8000/notifications/claim",
+        "options": {
+          "timeout": 240000
+        }
+      },
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 2000
+    },
+    {
+      "id": "bcabc27f-dbb6-5b1e-9a3c-3a23d718760b",
+      "name": "Simulation?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        510,
+        0
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "e395d627-ae12-5496-aa8a-9f73c164a995",
+              "leftValue": "={{ $json.mode }}",
+              "rightValue": "dry-run",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "43ac3756-9db9-50b5-8bfe-44588b57def6",
+      "name": "Email?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1040,
+        0
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "c1458ec1-5914-5c7e-a3ff-47ef2388a737",
+              "leftValue": "={{ $json.mode }}",
+              "rightValue": "email",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "147948a5-9b66-5608-a45c-213fa8f58488",
+      "name": "Live delivery gate",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        780,
+        160
+      ],
+      "parameters": {
+        "jsCode": "// Keep false until credentials, recipients and the selected send node are configured.\nconst ENABLE_LIVE_DELIVERY = false;\nif (!ENABLE_LIVE_DELIVERY) throw new Error(\"Live delivery is not configured. See docs/setup-guide.md\");\nreturn $input.all();"
+      }
+    },
+    {
+      "id": "6a393def-b7ae-5889-98d1-d7feedfe2e2b",
+      "name": "Send email",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2.1,
+      "position": [
+        1320,
+        80
+      ],
+      "parameters": {
+        "fromEmail": "demo-sender@example.invalid",
+        "toEmail": "={{ $json.recipients.join(\",\") }}",
+        "subject": "={{ $json.subject }}",
+        "emailFormat": "text",
+        "text": "={{ $json.body }}",
+        "options": {}
+      },
+      "disabled": true,
+      "onError": "continueErrorOutput",
+      "notes": "CONFIGURATION REQUIRED: select an SMTP credential, set sender and test recipients, then enable."
+    },
+    {
+      "id": "e9203af7-24de-5a66-8842-f6a4c0613565",
+      "name": "Send Slack",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.3,
+      "position": [
+        1320,
+        350
+      ],
+      "parameters": {
+        "resource": "message",
+        "operation": "post",
+        "select": "channel",
+        "channelId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $json.severity === \"CRITICAL\" ? \"REPLACE_PMO_CHANNEL_ID\" : \"REPLACE_PM_CHANNEL_ID\" }}"
+        },
+        "messageType": "text",
+        "text": "={{ $json.subject + \"\\n\" + $json.body }}",
+        "otherOptions": {}
+      },
+      "disabled": true,
+      "onError": "continueErrorOutput",
+      "notes": "CONFIGURATION REQUIRED: select Slack credential and channels, then enable. PMO channel must include PM and PMO reviewers."
+    },
+    {
+      "id": "a73af32e-3ed8-5983-b293-0e6eda6594be",
+      "name": "Record simulation",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        790,
+        -80
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "http://hub-api:8000/notifications/ack",
+        "options": {
+          "timeout": 240000
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ notification_id: $(\"Claim notification\").first().json.notification_id, lease_token: $(\"Claim notification\").first().json.lease_token, success: true, simulated: true }) }}"
+      },
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 2000
+    },
+    {
+      "id": "4896dee9-1d95-5dc5-831c-06d88f53c33d",
+      "name": "Record delivery",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1600,
+        50
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "http://hub-api:8000/notifications/ack",
+        "options": {
+          "timeout": 240000
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ notification_id: $(\"Claim notification\").first().json.notification_id, lease_token: $(\"Claim notification\").first().json.lease_token, success: true, simulated: false }) }}"
+      },
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 2000
+    },
+    {
+      "id": "e94cdb08-fc48-5ac2-a282-97577a154144",
+      "name": "Record failure",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1600,
+        350
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "http://hub-api:8000/notifications/ack",
+        "options": {
+          "timeout": 240000
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ notification_id: $(\"Claim notification\").first().json.notification_id, lease_token: $(\"Claim notification\").first().json.lease_token, success: false, simulated: false }) }}"
+      },
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 2000
+    }
+  ],
+  "connections": {
+    "Manual demo": {
+      "main": [
+        [
+          {
+            "node": "Claim notification",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule": {
+      "main": [
+        [
+          {
+            "node": "Claim notification",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Claim notification": {
+      "main": [
+        [
+          {
+            "node": "Simulation?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simulation?": {
+      "main": [
+        [
+          {
+            "node": "Record simulation",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Live delivery gate",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Live delivery gate": {
+      "main": [
+        [
+          {
+            "node": "Email?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Email?": {
+      "main": [
+        [
+          {
+            "node": "Send email",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send Slack",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send email": {
+      "main": [
+        [
+          {
+            "node": "Record delivery",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Record failure",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send Slack": {
+      "main": [
+        [
+          {
+            "node": "Record delivery",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Record failure",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "timezone": "Europe/Berlin"
+  },
+  "pinData": {},
+  "tags": []
+}

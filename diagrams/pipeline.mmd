@@ -1,0 +1,9 @@
+flowchart TD
+  W1["01 Health monitor"] --> SNAP["Validated daily snapshots"]
+  SNAP --> W2["02 Escalation consumer"]
+  W2 --> ISSUE["Issue episodes"]
+  ISSUE --> W3["03 Reporting consumer"]
+  W3 --> OUT["Leased notification outbox"]
+  OUT --> W4["04 Delivery and acknowledgement"]
+  SNAP --> W5["05 Weekly digest"]
+  SNAP --> W6["06 Analytics export"]

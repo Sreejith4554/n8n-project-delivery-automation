@@ -1,0 +1,10 @@
+{
+  "snapshots": 20,
+  "escalations": 17,
+  "reports": 20,
+  "outbox": 14,
+  "events": 0,
+  "notifications": {
+    "simulated": 14
+  }
+}

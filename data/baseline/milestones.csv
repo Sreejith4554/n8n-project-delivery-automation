@@ -1,0 +1,21 @@
+milestone_id,project_id,title,baseline_date,forecast_date,status
+P01-M1,P01,Cedar Workflow Rollout: release acceptance,2026-09-28,2026-09-28,open
+P01-M2,P01,Cedar Workflow Rollout: handover,2026-09-28,2026-09-28,open
+P02-M1,P02,Harbor Onboarding: release acceptance,2026-09-20,2026-09-23,open
+P02-M2,P02,Harbor Onboarding: handover,2026-09-28,2026-09-28,open
+P03-M1,P03,Summit Data Migration: release acceptance,2026-09-20,2026-09-28,open
+P03-M2,P03,Summit Data Migration: handover,2026-09-28,2026-09-28,open
+P04-M1,P04,Orion Integration: release acceptance,2026-09-20,2026-09-21,open
+P04-M2,P04,Orion Integration: handover,2026-09-28,2026-09-28,open
+P05-M1,P05,Meadow Service Expansion: release acceptance,2026-09-28,2026-09-28,open
+P05-M2,P05,Meadow Service Expansion: handover,2026-09-28,2026-09-28,open
+P06-M1,P06,Atlas Access Review: release acceptance,2026-09-28,2026-09-28,open
+P06-M2,P06,Atlas Access Review: handover,2026-09-28,2026-09-28,open
+P07-M1,P07,River Recovery: release acceptance,2026-09-20,2026-09-29,open
+P07-M2,P07,River Recovery: handover,2026-09-28,2026-09-28,open
+P08-M1,P08,Beacon Platform Refresh: release acceptance,2026-09-28,2026-09-28,open
+P08-M2,P08,Beacon Platform Refresh: handover,2026-09-28,2026-09-28,open
+P09-M1,P09,Willow Knowledge Base: release acceptance,2026-09-28,2026-09-28,open
+P09-M2,P09,Willow Knowledge Base: handover,2026-09-28,2026-09-28,open
+P10-M1,P10,Juniper Reporting: release acceptance,2026-09-20,2026-09-26,open
+P10-M2,P10,Juniper Reporting: handover,2026-09-28,2026-09-28,open

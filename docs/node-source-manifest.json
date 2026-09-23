@@ -1,0 +1,61 @@
+{
+  "release": "n8n@2.40.5",
+  "scope": "Static inspection of official source definitions; not runtime execution or full JSON schema validation.",
+  "files": [
+    {
+      "source": "https://raw.githubusercontent.com/n8n-io/n8n/n8n%402.40.5/packages/nodes-base/nodes/HttpRequest/HttpRequest.node.ts",
+      "sha256": "b3b8c69d8a54da7abbd451c50d2fd7dc9fc3e25d1036a960de8a7630c0066832",
+      "bytes": 1751
+    },
+    {
+      "source": "https://raw.githubusercontent.com/n8n-io/n8n/n8n%402.40.5/packages/nodes-base/nodes/HttpRequest/V3/Description.ts",
+      "sha256": "e34b73b1e8fd85f4c638c40cbb882be6abb863d3ffe3e21f7d98881466296fcf",
+      "bytes": 30561
+    },
+    {
+      "source": "https://raw.githubusercontent.com/n8n-io/n8n/n8n%402.40.5/packages/nodes-base/nodes/Schedule/ScheduleTrigger.node.ts",
+      "sha256": "d5940f9495b927db97162007f12f3a96464db4814aeb4aa74fa5c596acad786d",
+      "bytes": 15600
+    },
+    {
+      "source": "https://raw.githubusercontent.com/n8n-io/n8n/n8n%402.40.5/packages/nodes-base/nodes/ManualTrigger/ManualTrigger.node.ts",
+      "sha256": "e97ec4f6c720a9f88509d155ffcafc3d9dc9a54d65bec0fbd19061b3c59885ba",
+      "bytes": 1288
+    },
+    {
+      "source": "https://raw.githubusercontent.com/n8n-io/n8n/n8n%402.40.5/packages/nodes-base/nodes/If/V2/IfV2.node.ts",
+      "sha256": "a79ce64757277cb92879f26cb15cbc2beb358bc73fba6aa2b3728296a37cc391",
+      "bytes": 4312
+    },
+    {
+      "source": "https://raw.githubusercontent.com/n8n-io/n8n/n8n%402.40.5/packages/nodes-base/nodes/EmailSend/v2/EmailSendV2.node.ts",
+      "sha256": "15dd61521f8592ffbcf1d3d6ab4caf591e115f26aa2cb4fbb806a0844c07ef40",
+      "bytes": 2562
+    },
+    {
+      "source": "https://raw.githubusercontent.com/n8n-io/n8n/n8n%402.40.5/packages/nodes-base/nodes/EmailSend/v2/send.operation.ts",
+      "sha256": "f45a85c4d3839033bdcb434be00fe242fc15ec6de1b7e6bae7fc64843b8f59bb",
+      "bytes": 7954
+    },
+    {
+      "source": "https://raw.githubusercontent.com/n8n-io/n8n/n8n%402.40.5/packages/nodes-base/nodes/Slack/V2/SlackV2.node.ts",
+      "sha256": "c161969c5656094f52104707182caa2bf87f2fd0124ff9b67d5d62c4ce89b587",
+      "bytes": 51054
+    },
+    {
+      "source": "https://raw.githubusercontent.com/n8n-io/n8n/n8n%402.40.5/packages/nodes-base/nodes/Slack/V2/MessageDescription.ts",
+      "sha256": "45b9622d2af581ca544449d41e8ae52fac17bec65a2f9c903008511a871a08f6",
+      "bytes": 36411
+    },
+    {
+      "source": "https://raw.githubusercontent.com/n8n-io/n8n/n8n%402.40.5/packages/nodes-base/nodes/Code/Code.node.ts",
+      "sha256": "26b388bc93387613253e8f00ab3ea9c3f7ad874577586afdb152c1211d8f6543",
+      "bytes": 7336
+    },
+    {
+      "source": "https://raw.githubusercontent.com/n8n-io/n8n/n8n%402.40.5/packages/nodes-base/nodes/StickyNote/StickyNote.node.ts",
+      "sha256": "e35208a8bb848b0dfb43088c8a6e8e92428ba8eb550b400631a783c2b2853baa",
+      "bytes": 1179
+    }
+  ]
+}

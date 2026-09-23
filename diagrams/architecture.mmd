@@ -1,0 +1,11 @@
+flowchart TD
+  CSV["Synthetic CSV files"] --> API["Local Python service"]
+  N8N["Six n8n workflows"] --> API
+  API --> DB["SQLite snapshots and outbox"]
+  DB --> ROUTE["Notification routing"]
+  ROUTE --> SIM["Default simulation"]
+  ROUTE --> SEND["Optional email or Slack"]
+  API --> REPORT["Verified status reports"]
+  LLM["Optional local Ollama"] -. "Fact ordering only" .-> REPORT
+  API --> EXPORT["CSV history and weekly digest"]
+  EXPORT --> BI["Power BI Desktop"]

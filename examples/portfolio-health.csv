@@ -1,0 +1,21 @@
+snapshot_date,project_id,project_name,project_manager,project_status,health_score,progress_percentage,overdue_tasks,total_tasks,high_risks,blocked_dependencies,milestone_variance_days,budget_variance_percentage,previous_health_score,health_score_change,trend
+2026-09-22,P01,Cedar Workflow Rollout,Demo PM 01,HEALTHY,100,50.0,0,12,0,0,0,0.0,,,NEW
+2026-09-22,P02,Harbor Onboarding,Demo PM 02,AT RISK,74,50.0,4,12,0,0,3,0.0,,,NEW
+2026-09-22,P03,Summit Data Migration,Demo PM 03,CRITICAL,41,25.0,9,12,1,1,8,0.0,,,NEW
+2026-09-22,P04,Orion Integration,Demo PM 04,CRITICAL,59,50.0,2,12,0,1,2,0.0,,,NEW
+2026-09-22,P05,Meadow Service Expansion,Demo PM 05,CRITICAL,59,50.0,1,12,0,0,0,30.0,,,NEW
+2026-09-22,P06,Atlas Access Review,Demo PM 06,CRITICAL,59,50.0,0,12,1,0,0,0.0,,,NEW
+2026-09-22,P07,River Recovery,Demo PM 07,CRITICAL,52,25.0,9,12,0,0,9,0.0,,,NEW
+2026-09-22,P08,Beacon Platform Refresh,Demo PM 08,HEALTHY,100,50.0,0,12,0,0,0,0.0,,,NEW
+2026-09-22,P09,Willow Knowledge Base,Demo PM 09,HEALTHY,100,50.0,0,12,0,0,0,0.0,,,NEW
+2026-09-22,P10,Juniper Reporting,Demo PM 10,AT RISK,65,50.0,3,12,1,0,6,0.0,,,NEW
+2026-09-23,P01,Cedar Workflow Rollout,Demo PM 01,HEALTHY,100,50.0,0,12,0,0,0,0.0,100,0,STABLE
+2026-09-23,P02,Harbor Onboarding,Demo PM 02,AT RISK,74,50.0,4,12,0,0,3,0.0,74,0,STABLE
+2026-09-23,P03,Summit Data Migration,Demo PM 03,CRITICAL,41,25.0,9,12,1,1,8,0.0,41,0,STABLE
+2026-09-23,P04,Orion Integration,Demo PM 04,CRITICAL,59,50.0,2,12,0,1,3,0.0,59,0,STABLE
+2026-09-23,P05,Meadow Service Expansion,Demo PM 05,CRITICAL,59,50.0,1,12,0,0,0,30.0,59,0,STABLE
+2026-09-23,P06,Atlas Access Review,Demo PM 06,CRITICAL,59,50.0,0,12,1,0,0,0.0,59,0,STABLE
+2026-09-23,P07,River Recovery,Demo PM 07,HEALTHY,95,50.0,1,12,0,0,0,0.0,52,43,IMPROVING
+2026-09-23,P08,Beacon Platform Refresh,Demo PM 08,CRITICAL,31,33.33,8,12,1,0,12,15.0,100,-69,DETERIORATING
+2026-09-23,P09,Willow Knowledge Base,Demo PM 09,HEALTHY,100,50.0,0,12,0,0,0,0.0,100,0,STABLE
+2026-09-23,P10,Juniper Reporting,Demo PM 10,AT RISK,65,50.0,3,12,1,0,6,0.0,65,0,STABLE

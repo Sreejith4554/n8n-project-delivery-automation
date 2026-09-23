@@ -1,0 +1,19 @@
+{
+  "checks": [
+    "Markdown relative links",
+    "deterministic regeneration",
+    "20 unique history rows",
+    "3/2/5 current statuses",
+    "synthetic addresses",
+    "focused secret patterns",
+    "JSON parse",
+    "Python compile"
+  ],
+  "result": "PASS",
+  "files_checked": 81,
+  "status_counts": {
+    "HEALTHY": 3,
+    "AT RISK": 2,
+    "CRITICAL": 5
+  }
+}
