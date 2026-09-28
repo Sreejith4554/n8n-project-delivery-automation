@@ -156,8 +156,5 @@ SQLite is appropriate for this small local demonstration, not a claim of enterpr
 
 Future improvements: authenticated push ingestion, provider-supported idempotency, operational alerting for dead letters, independent report review, schema migrations, retention policies, multi-user authorization and a Power BI dashboard. These are not implemented.
 
-## Portfolio use
-
-[Repository description, topics, three CV bullets, LinkedIn project description, interview questions and factual answers](docs/portfolio-guide.md).
 
 License: MIT for this repository's original code and documentation. n8n and optional tools retain their own licenses; n8n is not relicensed by this repository.
